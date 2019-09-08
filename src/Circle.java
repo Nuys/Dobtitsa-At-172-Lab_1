@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Circle {
     double R;
 
@@ -25,5 +27,31 @@ public class Circle {
         System.out.println("Радиус круга: "+ this.R);
         System.out.println("Площадь круга: "+ getSquare());
         System.out.println("Длина круга: "+ longCircle());
+    }
+    private double getMiddleSquare(ArrayList<Circle> circle){//Метод для нахождения средн.арифм.
+        double summ_all_Square =  0;//Сумма всех площадей окружностей
+        int counter = 0;//Кол-во кругов в массиве
+        double middleSquare = 0;//Результат( среднее арифм. всех площадей окружностей
+        for(Circle i : circle){//цикл ( перебор массива)
+        summ_all_Square += i.getSquare();
+        counter++;
+        }
+       middleSquare = summ_all_Square / counter;
+        return middleSquare;
+    }
+    public void getLowCircle(ArrayList<Circle> circle){//Метод для нахождения окружности с найменьшей площадью
+        ArrayList<Circle>result = new ArrayList<Circle>();//Массив
+        double middleSquare = getMiddleSquare(circle);//присвоем новой переменной значений прошлого метода(среднее арифм)
+        for(Circle i : circle ){
+            if (i.getSquare() < middleSquare){//само условие
+                result.add(i);
+            }
+        }
+        //
+        System.out.println("Среднеарифметическое площадей : " + middleSquare);
+        for(Circle i : result){
+            System.out.println("Окружности подходящие под условие : ");
+            i.getinfo();
+        }
     }
 }

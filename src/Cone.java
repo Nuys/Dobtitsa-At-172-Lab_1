@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Cone extends Circle {
     double h;
 
@@ -33,4 +35,14 @@ public class Cone extends Circle {
         System.out.println("Длина основания круга конуса: "+ longCircle());
         System.out.println("Обьем конуса: "+ getVolume());
     }
+    public void getMaxVolume(ArrayList<Cone> cone){
+        double max = cone.get(0).getVolume();
+        for(Cone i : cone) {
+            if ( i.getVolume()>max){
+                max = i.getVolume();
+            }
+        }
+        System.out.println(max);
+    }
+
 }
