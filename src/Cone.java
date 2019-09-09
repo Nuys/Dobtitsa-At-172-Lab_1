@@ -11,8 +11,9 @@ public class Cone extends Circle {
         this.h = h;
     }
 
-    public Cone(double r, double h) {
+    public Cone(double r, double h) {//обозначение с математики r - радиус , h - высота , будем использовать эти обозначения для вычисления...
         super(r);//конструктор родительского класса (класа Circle)
+        isCorect(h);//вызов метода для проверки входных данных( только высоты т.к радиус провериться  в родительском Классе
         this.h = h;
     }
     //переопределение @Override - один из видов анотаций
@@ -27,14 +28,6 @@ public class Cone extends Circle {
         double V = (doubleR * 3.14159 * this.h)/3;
         return V;
     }
-    @Override
-    public void getinfo(){
-        System.out.println("Радиус конуса: "+ this.R);
-        System.out.println("Высота конуса: "+ this.h);
-        System.out.println("Площадь конуса: "+ getSquare());
-        System.out.println("Длина основания круга конуса: "+ longCircle());
-        System.out.println("Обьем конуса: "+ getVolume());
-    }
     public void getMaxVolume(ArrayList<Cone> cone){
         double max = cone.get(0).getVolume();
         for(Cone i : cone) {
@@ -42,7 +35,15 @@ public class Cone extends Circle {
                 max = i.getVolume();
             }
         }
-        System.out.println(max);
+        System.out.println(" Нйбольший обьем среди конусов  : " +  max);
     }
+    @Override
+    public String toString (){
+        return " Радиус конуса : "+ this.R +
+                " , Площадь конуса : " + getSquare() +
+                " , Длина конуса : " + longCircle() +
+                " , Высота конуса : " + this.h +
+                " , Обьем конуса : " + getVolume();
+        }
 
 }

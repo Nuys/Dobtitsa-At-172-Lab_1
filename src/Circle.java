@@ -12,6 +12,7 @@ public class Circle {
     }
 //Конструктор
     public Circle(double r) {
+        isCorect(r);//вызов метода для проверки входных данных
         R = r;
     }
 //Метод для ...
@@ -23,11 +24,8 @@ public class Circle {
         double D = 2 * this.R;
         return D * 3.14159;
     }
-    public void getinfo(){
-        System.out.println("Радиус круга: "+ this.R);
-        System.out.println("Площадь круга: "+ getSquare());
-        System.out.println("Длина круга: "+ longCircle());
-    }
+
+
     private double getMiddleSquare(ArrayList<Circle> circle){//Метод для нахождения средн.арифм.
         double summ_all_Square =  0;//Сумма всех площадей окружностей
         int counter = 0;//Кол-во кругов в массиве
@@ -48,10 +46,22 @@ public class Circle {
             }
         }
         //
-        System.out.println("Среднеарифметическое площадей : " + middleSquare);
+        System.out.println("Среднеарифметическое площадей = " + middleSquare);
         for(Circle i : result){
             System.out.println("Окружности подходящие под условие : ");
-            i.getinfo();
+            System.out.println(toString());
         }
+    }
+        @Override
+        public String toString (){//переопредиление метода
+             return " Радиус круга : "+ this.R +
+                " , Площадь круга : " + getSquare() +
+                    " , Длина круга : " + longCircle();
+    }
+    public void isCorect(double number){//проверка на вводимость данных (ноль и отрицательные числа запрещены)
+            if (number <= 0 ){
+                throw new IllegalArgumentException("Вы ввели некоректное значение !");
+            }
+
     }
 }
