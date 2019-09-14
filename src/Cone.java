@@ -1,49 +1,53 @@
 import java.util.ArrayList;
 
+import lombok.Setter;
+import lombok.Getter;
+
 public class Cone extends Circle {
-    double h;
-
-    public double getH() {
-        return h;
+    private static final  String DEFAULT_FORMAT = "%6.2f";//формат
+    public Cone(double radius, double height) {
+        super(radius);//конструктор родительского класса (класа Circle)
+        isCorrect(height);//вызов метода для проверки входных данных( только высоты т.к радиус провериться  в родительском Классе
+        this.height = height;
     }
 
-    public void setH(double h) {
-        this.h = h;
-    }
+    @Setter @Getter double height;
 
-    public Cone(double r, double h) {//обозначение с математики r - радиус , h - высота , будем использовать эти обозначения для вычисления...
-        super(r);//конструктор родительского класса (класа Circle)
-        isCorect(h);//вызов метода для проверки входных данных( только высоты т.к радиус провериться  в родительском Классе
-        this.h = h;
-    }
-    //переопределение @Override - один из видов анотаций
+    /*
+    Найдем площадь , обьем и максимальный обьем среди конусов (по условию) соотв. методы
+    getSquare, getVolume, getMaxVolume
+     */
     @Override
     public double getSquare(){
-        double L = Math.pow(this.R,2) + Math.pow(this.h,2);
-       double square = L * this.R * 3.14159;
-       return square;
+        double L = Math.pow(Radius,2) + Math.pow(this.height,2);
+        return L * Radius * 3.14159;
     }
-    public double getVolume(){
-        double doubleR = Math.pow(this.R,2);
-        double V = (doubleR * 3.14159 * this.h)/3;
-        return V;
+    private double getVolume(){
+        double doubleRadius = Math.pow(Radius,2);
+        return (doubleRadius * 3.14159 * this.height)/3;
     }
-    public void getMaxVolume(ArrayList<Cone> cone){
-        double max = cone.get(0).getVolume();
-        for(Cone i : cone) {
-            if ( i.getVolume()>max){
-                max = i.getVolume();
+    void getMaxVolume(ArrayList<Cone> cone){
+            double maxStatement = cone.get(0).getVolume();
+            for(Cone i : cone) {
+                if ( i.getVolume()>maxStatement){
+                    maxStatement = i.getVolume();
+                }
             }
-        }
-        System.out.println(" Нйбольший обьем среди конусов  : " +  max);
+
+        System.out.println(" Нйбольший обьем среди конусов  :" + String.format(DEFAULT_FORMAT,maxStatement));
     }
+    /*
+    Переопределим метод toString , т.к. по дефолту он выводит информацию об обьекте .
+     */
     @Override
     public String toString (){
-        return " Радиус конуса : "+ this.R +
-                " , Площадь конуса : " + getSquare() +
-                " , Длина конуса : " + longCircle() +
-                " , Высота конуса : " + this.h +
-                " , Обьем конуса : " + getVolume();
+        return
+                " Радиус окружности конуса : "+ Radius +
+                " , Площадь конуса : " + String.format(DEFAULT_FORMAT, getSquare())+
+                " , Длина окружности конуса : " + String.format(DEFAULT_FORMAT,longCircle()) +
+                " , Высота конуса : " + this.height +
+                " , Обьем конуса : " + String.format(DEFAULT_FORMAT, getVolume()) +
+                        " ;";
         }
 
 }
