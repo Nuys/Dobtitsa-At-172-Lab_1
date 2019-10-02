@@ -9,7 +9,6 @@ public class Driver{
     String payment;
 
 public Driver(){
-
 }
     /**
      * Конструктор для опредиления элемнтов массива
