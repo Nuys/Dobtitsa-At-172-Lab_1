@@ -11,7 +11,6 @@ public class Driver{
 public Driver(){
 
 }
-
     /**
      * Конструктор для опредиления элемнтов массива
      * @param place_number
