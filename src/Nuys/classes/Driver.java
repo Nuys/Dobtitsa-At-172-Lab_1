@@ -12,13 +12,13 @@ public Driver(){
 }
     /**
      * Конструктор для опредиления элемнтов массива
-     * @param place_number
-     * @param name
-     * @param surname
-     * @param patronymic
-     * @param car_model
-     * @param availability_of_car
-     * @param payment
+     * @param place_number место на стоянке
+     * @param name имя водителя
+     * @param surname фамилия водителя
+     * @param patronymic отчество водителя
+     * @param car_model марка машины
+     * @param availability_of_car наличие машины на автостоянке
+     * @param payment    переменная оплата
      */
     public Driver(String place_number, String name,String surname,String patronymic, String car_model, String availability_of_car, String payment) {
         this.place_number = place_number;
@@ -32,7 +32,7 @@ public Driver(){
 
     /**
      * Конструктор для пустых мест на парковке
-     * @param place_number
+     * @param place_number переменная ответ. за номер места
      */
     public Driver(String place_number) {
         this.place_number = place_number;
@@ -45,7 +45,7 @@ public Driver(){
     }
 
     /**
-     * Конструктор для пустого поля неполаты (условия задания , (неоплатившие))
+     * Конструктор для пустого поля неоплаты (условия задания , (неоплатившие))
      * @param place_number
      * @param name
      * @param surname
