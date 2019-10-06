@@ -18,6 +18,7 @@ public class Main{
         drivers.add(new Driver("10","Анатолий","Петров","Васильевич","Vaz 21093","yes"),10);
         Menu();
     }
+    
     static void Menu(){
         int menuNumber = 0;
         Scanner scanner = new Scanner(System.in);
