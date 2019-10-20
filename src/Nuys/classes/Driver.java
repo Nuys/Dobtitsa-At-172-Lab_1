@@ -20,13 +20,13 @@ public class Driver{
      *      * @param availability_of_car наличие машины на автостоянке
      *      * @param payment    переменная оплата
      *      */
-     *
+
 
     public Driver(String place_number, String name, String surname, String patronymic, String car_model, String availability_of_car, String payment) {
-     *this.place_number = place_number;
-     *this.name = name;
-     *this.surname = surname;
-     *this.patronymic = patronymic;шины
+     this.place_number = place_number;
+     this.name = name;
+     this.surname = surname;
+     this.patronymic = patronymic;
         this.car_model = car_model;
         this.availability_of_car = availability_of_car;
         this.payment = payment;
