@@ -18,7 +18,7 @@ public Driver(){
      * @param patronymic отчество водителя
      * @param car_model марка машины
      * @param availability_of_car наличие машины на автостоянке
-     * @param payment    переменная оплата
+     * @param payment     оплата за текущий месяц
      */
     public Driver(String place_number, String name,String surname,String patronymic, String car_model, String availability_of_car, String payment) {
         this.place_number = place_number;
@@ -61,6 +61,15 @@ public Driver(){
     this.car_model = car_model;
     this.availability_of_car = availability_of_car;
     this.payment = null;
+    }
+    public Driver( String name,String surname,String patronymic, String car_model, String availability_of_car) {
+        this.place_number = null;
+        this.name = name;
+        this.surname = surname;
+        this.patronymic = patronymic;
+        this.car_model = car_model;
+        this.availability_of_car = availability_of_car;
+        this.payment = null;
     }
     public String getName() {
         return name;
