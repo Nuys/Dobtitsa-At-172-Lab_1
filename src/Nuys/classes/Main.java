@@ -1,6 +1,5 @@
 package Nuys.classes;
 import java.io.IOException;
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class Main {
@@ -19,7 +18,14 @@ public class Main {
         drivers.add(new Driver("8"), 8);
         drivers.add(new Driver("9"), 9);
         drivers.add(new Driver("10", "Анатолий", "Петров", "Васильевич", "Vaz 21093", "yes"), 10);
+        TaskExecuting taskExecuting = new TaskExecuting();
+        taskExecuting.start();
         Menu();
+
+    }
+    public static void BackUp(){
+        BackUp backUp = new BackUp("DriversBackup.bcp", drivers);
+        backUp.start();
     }
 
     public static void Menu() throws IOException,ClassNotFoundException {
@@ -44,7 +50,7 @@ public class Main {
             while (!isCorrectly) {
                 tempMenuNumber = scanner.next();
                 scanner.nextLine();
-                if (tempMenuNumber.matches("[1-6,0]{1}")) {
+                if (tempMenuNumber.matches("[1-8,0]{1}")) {
                     isCorrectly = true;
                 } else {
                     System.out.println("Введите корректное значение: ");
