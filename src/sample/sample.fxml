@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="790.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <MenuBar style="-fx-background-color: white blue;">
+        <menus>
+          <Menu mnemonicParsing="false" text="Файл">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Открыть" />
+                  <MenuItem mnemonicParsing="false" text="Сохранитель" />
+                  <MenuItem mnemonicParsing="false" text="Выйти" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Инфо">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Список всех водителей" />
+                  <MenuItem mnemonicParsing="false" text="Список свободных мест" />
+                  <MenuItem mnemonicParsing="false" text="Выдача сведений о неплате" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Редактировать">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Удалить с заданной фамилией" />
+                  <MenuItem mnemonicParsing="false" text="Добавить водителя" />
+                  <MenuItem mnemonicParsing="false" text="Удалить всех" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Unspecified Menu">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Action 1" />
+              </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <TableView prefHeight="420.0" prefWidth="790.0">
+        <columns>
+          <TableColumn prefWidth="76.79998475313187" text="Место №" />
+          <TableColumn prefWidth="103.19998168945312" text="Имя" />
+            <TableColumn prefWidth="72.00006103515625" text="Фамилия" />
+            <TableColumn prefWidth="100.00001525878906" text="Отчество" />
+            <TableColumn prefWidth="114.39996337890625" text="Марка авто" />
+            <TableColumn prefWidth="203.20001220703125" text="Наличие на стоянке авто" />
+            <TableColumn prefWidth="120.79998779296875" text="Оплата" />
+        </columns>
+      </TableView>
+   </children>
+</VBox>
