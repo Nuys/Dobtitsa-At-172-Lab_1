@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="176.0" prefWidth="238.0" xmlns="http://javafx.com/javafx/10.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.InputPlaceNumberController">
+   <children>
+      <Button fx:id="btnCancel" layoutX="14.0" layoutY="123.0" mnemonicParsing="false" onMouseClicked="#OnClickedCancel" text="Отмена" />
+      <Button fx:id="btnOk" layoutX="153.0" layoutY="123.0" mnemonicParsing="false" onMouseClicked="#onClickedOk" prefHeight="32.0" prefWidth="70.0" text="Ок" />
+      <Label layoutX="71.0" layoutY="32.0" text="Введите место" />
+      <TextField fx:id="txtPlaceNumber" layoutX="29.0" layoutY="72.0" />
+   </children>
+</AnchorPane>
