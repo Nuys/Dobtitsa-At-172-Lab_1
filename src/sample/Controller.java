@@ -50,36 +50,38 @@ public class Controller {
         paymentColumn.setCellValueFactory(new PropertyValueFactory<Driver, String>("payment"));
         addToTable();
     }
-    private void addToTable(){
+
+    private void addToTable() {
         list.addAll(drivers.getList());
         tableDrivers.setItems(list);
     }
+
     public void addToList(ActionEvent actionEvent) {
         Main.inputPlaceNumber();
         if (InputPlaceNumberController.placeNumber != null && !InputPlaceNumberController.IsCancel) {
             if (drivers.addToList(InputPlaceNumberController.placeNumber) != null) {
                 list.add(drivers.getList().get(drivers.getList().size() - 1));
-            }else{
+            } else {
                 AlertInformation("Добавление водителя в список", "Место уже занято", "Место уже занято, проверьте правильность ввода!", Alert.AlertType.INFORMATION);
             }
         }
     }
 
-    private void AlertInformation(String title, String header, String content, Alert.AlertType typeAlert){
+    private void AlertInformation(String title, String header, String content, Alert.AlertType typeAlert) {
         Alert alert = new Alert(typeAlert);
         alert.setTitle(title);
         alert.setHeaderText(header);
         alert.setContentText(content);
         alert.showAndWait();
     }
-    public void onAddDriver(ActionEvent actionEvent){
+
+    public void onAddDriver(ActionEvent actionEvent) {
 
         Driver selectedItem = tableDrivers.getSelectionModel().getSelectedItem();
-    Main.inputDriver();
-    if(InputDriverController.fullName!=null && !InputDriverController.IsCancel){
-            if(drivers.getNewDriver(InputDriverController.place_numberCheck,InputDriverController.fullName,InputDriverController.carModel,InputDriverController.availabilityOfCar,InputDriverController.paymentCont) ){
+        Main.inputDriver();
+        if (InputDriverController.fullName != null && !InputDriverController.IsCancel) {
+            list.setAll(drivers.getNewDriver(InputDriverController.place_numberCheck, InputDriverController.fullName, InputDriverController.carModel, InputDriverController.availabilityOfCar, InputDriverController.paymentCont));
 
-            }
-    }
+        }
     }
 }

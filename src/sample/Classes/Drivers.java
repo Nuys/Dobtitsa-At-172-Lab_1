@@ -25,7 +25,7 @@ public class Drivers {
         }
         return false;
     }
-    public void getNewDriver(String placeNumber,String fullName, String carModel, String availabilityOfCar, String payment){
+    public ArrayList getNewDriver(String placeNumber,String fullName, String carModel, String availabilityOfCar, String payment){
         for(Driver driver:this.list){
             if(placeNumber.equals(driver.getPlaceNumber()) && driver.getFullName().equals("Неизвестно")){
                 driver.setFullName(fullName);
@@ -34,6 +34,7 @@ public class Drivers {
                 driver.setPayment(payment);
             }
         }
+        return this.list;
     }
 
 }

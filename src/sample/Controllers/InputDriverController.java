@@ -43,7 +43,7 @@ public class InputDriverController {
     }
     public boolean OnClickedOk(MouseEvent mouseEvent) {
     if (!btnMenuAvailabilityOfCarAdd.getText().equals("Наличие авто на стоянке")
-            && !btnMenuPaymentAdd.getText().equals("Оплата")
+            && !btnMenuPaymentAdd.getText().isEmpty() && !btnMenuPaymentAdd.getText().equals("Оплата")
             && !txtFullNameAdd.getText().isEmpty() && txtFullNameAdd.getText().matches("[А-Я][а-я]{2,}[ ][А-Я][а-я]{2,}[ ][А-Я][а-я]{2,}")
             && !txtCarModelAdd.getText().isEmpty() && txtCarModelAdd.getText().matches("[А-Я][а-я]{2,}")
             && !txtPlaceNumberCheck.getText().isEmpty() && txtPlaceNumberCheck.getText().matches("[0,1]{1,2}")) {
@@ -51,7 +51,7 @@ public class InputDriverController {
         paymentCont = btnMenuPaymentAdd.getText();
         fullName = txtFullNameAdd.getText();
         carModel = txtCarModelAdd.getText();
-        place_numberChek = txtPlaceNumberCheck.getText();
+        place_numberCheck = txtPlaceNumberCheck.getText();
         OnClickedCancel(mouseEvent);
     }else {
         Alert alert = new Alert(Alert.AlertType.ERROR);

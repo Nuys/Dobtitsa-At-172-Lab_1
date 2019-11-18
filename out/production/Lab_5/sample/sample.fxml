@@ -7,7 +7,7 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="409.0" prefWidth="724.0" xmlns="http://javafx.com/javafx/10.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<VBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="409.0" prefWidth="724.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
       <MenuBar prefHeight="0.0" prefWidth="668.0" VBox.vgrow="NEVER">
         <menus>
@@ -19,6 +19,7 @@
           <Menu mnemonicParsing="false" text="Edit">
             <items>
               <MenuItem mnemonicParsing="false" onAction="#addToList" text="Добавить место" />
+                  <MenuItem mnemonicParsing="false" onAction="#onAddDriver" text="Добавить водителя" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Help">

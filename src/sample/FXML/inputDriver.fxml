@@ -29,7 +29,7 @@
       <Label layoutX="49.0" layoutY="184.0" text="Введите марку автомобиля" />
       <Label layoutX="49.0" layoutY="238.0" text="Наличие на стоянке" />
       <Label layoutX="49.0" layoutY="303.0" text="Оплата" />
-      <TextField fx:id="txtPlaceNumberChek" layoutX="237.0" layoutY="36.0" />
+      <TextField fx:id="txtPlaceNumberCheck" layoutX="237.0" layoutY="36.0" />
       <Label layoutX="49.0" layoutY="41.0" text="Место №" />
    </children>
 </AnchorPane>
