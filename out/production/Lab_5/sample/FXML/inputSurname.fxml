@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="127.0" prefWidth="209.0" xmlns="http://javafx.com/javafx/10.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.InputSurnameController">
+    <children>
+        <Button fx:id="btnCancel" layoutX="22.0" layoutY="89.0" mnemonicParsing="false" onMouseClicked="#OnClickedCancel" prefHeight="25.0" prefWidth="70.0" text="Отмена" />
+        <Button fx:id="btnOk" layoutX="113.0" layoutY="89.0" mnemonicParsing="false" onMouseClicked="#OnClickedOk" prefHeight="25.0" prefWidth="70.0" text="Ок" />
+        <TextField fx:id="txtSurname" layoutX="22.0" layoutY="47.0" prefHeight="25.0" prefWidth="161.0" />
+        <Label layoutX="22.0" layoutY="22.0" text="Введите фамилию:">
+            <font>
+                <Font name="Gigi" size="13.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

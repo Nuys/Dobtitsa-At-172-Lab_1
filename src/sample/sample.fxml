@@ -20,6 +20,10 @@
             <items>
               <MenuItem mnemonicParsing="false" onAction="#addToList" text="Добавить место" />
                   <MenuItem mnemonicParsing="false" onAction="#onAddDriver" text="Добавить водителя" />
+                  <MenuItem mnemonicParsing="false" onAction="#listOfAvailablePlaceNumber" text="Список свободных мест" />
+                  <MenuItem mnemonicParsing="false" onAction="#printList" text="Список всех водителей" />
+                  <MenuItem mnemonicParsing="false" onAction="#findBySurname" text="Поиск водителя по фамилии" />
+                  <MenuItem mnemonicParsing="false" onAction="#removeOfList" text="Удаление водителя из базы" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Help">

@@ -59,6 +59,20 @@ public class Main extends Application {
             e.printStackTrace();
         }
  }
+    public static void inputSurname(){
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("FXML/inputSurname.fxml"));
+            Parent inputSurname = fxmlLoader.load();
+            Stage stage = new Stage();
+            stage.initModality(Modality.APPLICATION_MODAL);
+            stage.initStyle(StageStyle.UNDECORATED);
+            stage.setTitle("Окно ввода");
+            stage.setScene(new Scene(inputSurname));
+            stage.showAndWait();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
     public static void main(String[] args) {
         launch(args);
