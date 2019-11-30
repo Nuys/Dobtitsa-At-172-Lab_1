@@ -7,13 +7,15 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="409.0" prefWidth="724.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<VBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/10.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
       <MenuBar prefHeight="0.0" prefWidth="668.0" VBox.vgrow="NEVER">
         <menus>
           <Menu mnemonicParsing="false" text="File">
             <items>
-              <MenuItem mnemonicParsing="false" text="Close" />
+              <MenuItem mnemonicParsing="false" onAction="#openFile" text="Открыть" />
+                  <MenuItem mnemonicParsing="false" onAction="#saveFile" text="Сохранить" />
+                  <MenuItem mnemonicParsing="false" onAction="#exit" text="Выйти" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Edit">
@@ -24,16 +26,18 @@
                   <MenuItem mnemonicParsing="false" onAction="#printList" text="Список всех водителей" />
                   <MenuItem mnemonicParsing="false" onAction="#findBySurname" text="Поиск водителя по фамилии" />
                   <MenuItem mnemonicParsing="false" onAction="#removeOfList" text="Удаление водителя из базы" />
+                  <MenuItem mnemonicParsing="false" onAction="#clearAll" text="Очистить список" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Help">
             <items>
-              <MenuItem mnemonicParsing="false" text="About" />
+              <MenuItem mnemonicParsing="false" onAction="#about" text="About" />
+                  <MenuItem mnemonicParsing="false" onAction="#help" text="Помощ в использовании" />
             </items>
           </Menu>
         </menus>
       </MenuBar>
-      <TableView fx:id="tableDrivers" prefHeight="370.0" prefWidth="629.0">
+      <TableView fx:id="tableDrivers" prefHeight="567.0" prefWidth="900.0">
         <columns>
           <TableColumn fx:id="placeNumberColumn" prefWidth="51.19998013973236" text="Номер " />
           <TableColumn fx:id="fullNameColumn" prefWidth="200.0" text="Ф.И.О" />

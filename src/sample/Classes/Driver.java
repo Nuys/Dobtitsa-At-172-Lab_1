@@ -1,5 +1,7 @@
 package sample.Classes;
 import java.io.Serializable;
+import sample.Enums.AvailabilityOfCarClass;
+import sample.Enums.PaymentClass;
 
 
 public class Driver implements Serializable
@@ -53,8 +55,8 @@ public class Driver implements Serializable
         this.setPlaceNumber(placeNumber);
         this.setFullName(fullName);
         this.setCarModel(carModel);
-        this.setAvailabilityOfCar(availabilityOfCar);
-        this.setPayment(payment);
+        this.setAvailabilityOfCar(availabilityOfCar.toString());
+        this.setPayment(payment.toString());
     }
 
     public Driver(final String placeNumber) {
