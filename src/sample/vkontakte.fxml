@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="315.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.VkontakteController">
+   <children>
+       <TabPane layoutX="-1.0" layoutY="-1.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="315.0" prefWidth="400.0" tabClosingPolicy="UNAVAILABLE">
+           <tabs>
+               <Tab text="Профиль">
+                   <content>
+                       <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0">
+                           <children>
+                               <TextField fx:id="txtName" layoutX="169.0" prefHeight="44.0" prefWidth="210.0" text="Имя Фамилия">
+                                   <font>
+                                       <Font size="20.0" />
+                                   </font>
+                               </TextField>
+                               <TextField fx:id="txtNickname" layoutX="169.0" layoutY="43.0" prefHeight="44.0" prefWidth="210.0" text="\@Короткое имя">
+                                   <font>
+                                       <Font size="20.0" />
+                                   </font>
+                               </TextField>
+                               <TextField fx:id="txtFriends" layoutX="169.0" layoutY="86.0" prefHeight="44.0" prefWidth="210.0" text="Друзей: ">
+                                   <font>
+                                       <Font size="20.0" />
+                                   </font>
+                               </TextField>
+                               <TextField fx:id="txtMessages" layoutX="169.0" layoutY="129.0" prefHeight="44.0" prefWidth="210.0" text="Сообщений: ">
+                                   <font>
+                                       <Font size="20.0" />
+                                   </font>
+                               </TextField>
+                               <Button fx:id="btnOffline" layoutX="33.0" layoutY="151.0" mnemonicParsing="false" onMouseClicked="#setOffline" prefWidth="100.0" text="Стать Offline" />
+                               <TextField fx:id="txtStateOnline" layoutX="34.0" layoutY="179.0" prefHeight="16.0" prefWidth="101.0" text="Online">
+                                   <font>
+                                       <Font size="20.0" />
+                                   </font>
+                               </TextField>
+                        <ImageView fx:id="imgAvatar" fitHeight="109.0" fitWidth="100.0" layoutX="34.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@download.png" />
+                           </image>
+                        </ImageView>
+                           </children>
+                       </AnchorPane>
+                   </content>
+               </Tab>
+            <Tab text="Друзья">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tableFriends" layoutY="62.0" prefHeight="231.0" prefWidth="407.0">
+                          <columns>
+                              <TableColumn fx:id="name" prefWidth="181.0" text="Имя Фамилия" />
+                              <TableColumn fx:id="city" prefWidth="107.0" text="Город" />
+                              <TableColumn fx:id="country" prefWidth="118.0" text="Страна" />
+                          </columns>
+                        </TableView>
+                        <Label layoutX="185.0" layoutY="23.0" text="Поиск: ">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField layoutX="238.0" layoutY="21.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+           </tabs>
+       </TabPane>
+   </children>
+</AnchorPane>

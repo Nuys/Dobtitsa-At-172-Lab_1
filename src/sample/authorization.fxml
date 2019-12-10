@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="229.0" prefWidth="269.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.Authorization">
+   <children>
+      <TextField fx:id="txtLogin" layoutX="59.0" layoutY="55.0" />
+      <Label layoutX="59.0" layoutY="35.0" text="Логин:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="59.0" layoutY="90.0" text="Пароль:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <PasswordField fx:id="txtPassword" layoutX="59.0" layoutY="110.0" />
+      <Button fx:id="btnLogin" layoutX="59.0" layoutY="147.0" mnemonicParsing="false" onMouseClicked="#onMouseClicked" prefHeight="25.0" prefWidth="62.0" text="Войти" />
+      <TextField fx:id="txtQuantityProxy" editable="false" layoutX="59.0" layoutY="184.0" text="0" />
+   </children>
+</AnchorPane>
